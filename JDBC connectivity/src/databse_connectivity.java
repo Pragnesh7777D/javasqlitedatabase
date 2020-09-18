@@ -605,10 +605,11 @@ static	class date{
 		
 		public  void getdate() {
 			LocalDate d = LocalDate.now();
-			Calendar c = Calendar.getInstance();
-			c.setTime(new Date());
-			System.out.println(d);
-			System.out.println(c.get(Calendar.YEAR) +" "+(c.get(Calendar.DAY_OF_MONTH))+" "+c.get((Calendar.HOUR)));
+			Date d1 = new Date();
+			SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy");
+			d1.setMonth(d1.getMonth()+1);
+
+			System.out.println(ft.format(d1));
 		}
 	}
 	
